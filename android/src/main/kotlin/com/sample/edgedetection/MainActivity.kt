@@ -1,6 +1,4 @@
 package com.sample.edgedetection
-
-
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 

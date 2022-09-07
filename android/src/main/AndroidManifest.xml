@@ -1,12 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.sample.edgedetection">
 
     <uses-permission android:name="android.permission.CAMERA" />
 
     <permission
-        android:name="android.permission.FLASHLIGHT"
-        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
-        android:protectionLevel="normal" />
+        android:name="permissionOne"
+        tools:node="remove"
+        tools:selector="com.example.lib1"/>
+
+<!--    <permission-->
+<!--        android:name="android.permission.FLASHLIGHT"-->
+<!--        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"-->
+<!--        android:protectionLevel="normal" />-->
 
     <application
         android:allowBackup="true"

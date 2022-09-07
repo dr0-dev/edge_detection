@@ -1,16 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/action_label"
-        android:icon="@drawable/ic_done"
-        android:title="@string/done"
-        app:showAsAction="always" />
 
-    <item
-        android:id="@+id/rotation_image"
-        android:icon="@drawable/ic_rotate"
-        android:title="@string/rotate"
-        app:showAsAction="always" />
 
     <!--    <item-->
     <!--        android:id="@+id/gray"-->
@@ -20,17 +10,51 @@
     <!--        android:title="@string/reset"-->
     <!--        android:icon="@drawable/ic_reset_colors"/>-->
 
+    <!--    <item-->
+    <!--        android:title="Switch!"-->
+    <!--        app:actionViewClass="android.widget.Switch"-->
+    <!--        app:showAsAction="ifRoom" />-->
 
-    <group
-        android:id="@+id/enhance_group"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/gray"
-            android:icon="@drawable/ic_done"
-            android:title="@string/black" />
-        <item
-            android:id="@+id/reset"
-            android:icon="@drawable/ic_reset_colors"
-            android:title="@string/reset" />
-    </group>
+    <!--    <group-->
+    <!--        android:id="@+id/enhance_group">-->
+    <!--        <item-->
+    <!--            android:id="@+id/blue"-->
+    <!--            android:title="Blue"-->
+    <!--            android:icon="@drawable/ic_done"/>-->
+    <!--        <item-->
+    <!--            android:id="@+id/rotation_image"-->
+    <!--            app:actionLayout="@layout/custom_edit_row"-->
+    <!--            android:title="@string/rotate" />-->
+    <!--        <item-->
+    <!--            android:id="@+id/gray"-->
+    <!--            android:icon="@drawable/ic_done"-->
+    <!--            android:title="@string/black" />-->
+    <!--        &lt;!&ndash;        <item&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:id="@+id/reset"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:icon="@drawable/ic_reset_colors"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:title="@string/reset" />&ndash;&gt;-->
+    <!--    </group>-->
+
+    <item
+        android:id="@+id/rotation_image"
+        android:icon="@drawable/ic_rotate"
+        android:title="@string/rotate"
+        app:showAsAction="always"
+        app:actionLayout="@layout/rotate_button"/>
+
+
+    <item
+        android:layout_marginTop="20dp"
+        android:id="@+id/gray"
+        android:icon="@drawable/ic_done"
+        app:actionLayout="@layout/image_colors_button"
+        android:title="@string/black"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/done"
+        android:icon="@drawable/ic_done"
+        android:title="@string/done"
+        app:showAsAction="always" />
 </menu>

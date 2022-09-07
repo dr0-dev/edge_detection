@@ -71,8 +71,7 @@
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
-        >
+        android:background="@color/colorPrimary">
 
         <ImageView
             android:id="@+id/crop"

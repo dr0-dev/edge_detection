@@ -105,8 +105,8 @@ class EdgeDetectionHandler : MethodCallHandler, PluginRegistry.ActivityResultLis
             Intent(Intent(getActivity()?.applicationContext, ScanActivity::class.java))
         val bundle = Bundle();
         bundle.putString(SAVE_TO, call.argument<String>(SAVE_TO) as String)
-        bundle.putString(SCAN_TITLE, call.argument<String>(SCAN_TITLE) as String)
-        bundle.putString(CROP_TITLE, call.argument<String>(CROP_TITLE) as String)
+        bundle.putString(SCAN_TITLE, getActivity()?.applicationContext?.getString(R.string.scan) as String)
+        bundle.putString(CROP_TITLE, getActivity()?.applicationContext?.getString(R.string.crop) as String)
         bundle.putString(
             CROP_BLACK_WHITE_TITLE,
             call.argument<String>(CROP_BLACK_WHITE_TITLE) as String

@@ -1,0 +1,10 @@
+<resources>
+    <string name="crop">Ernte</string>
+    <string name="save">Sparen</string>
+    <string name="black"> S/W </string>
+    <string name="rotate">Drehen</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="scan">Scan</string>
+        <string name="done">Erledigt</string>
+        <string name="colors">Farben</string>
+</resources>

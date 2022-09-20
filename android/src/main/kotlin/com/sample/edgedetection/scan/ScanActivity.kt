@@ -63,29 +63,29 @@ class ScanActivity : BaseActivity(), IScanView.Proxy {
 
         this.title = initialBundle.getString(EdgeDetectionHandler.SCAN_TITLE) as String
 
-        gallery.visibility =
-            if (initialBundle.getBoolean(EdgeDetectionHandler.CAN_USE_GALLERY, true))
-                View.VISIBLE
-            else View.GONE;
+//        gallery.visibility =
+//            if (initialBundle.getBoolean(EdgeDetectionHandler.CAN_USE_GALLERY, true))
+//                View.VISIBLE
+//            else View.GONE;
 
-        gallery.setOnClickListener {
-            pickupFromGallery()
-        };
+//        gallery.setOnClickListener {
+//            pickupFromGallery()
+//        };
 
-        if (initialBundle.containsKey(EdgeDetectionHandler.FROM_GALLERY) && initialBundle.getBoolean(
-                EdgeDetectionHandler.FROM_GALLERY,
-                false
-            )
-        ) {
-            pickupFromGallery()
-        }
+//        if (initialBundle.containsKey(EdgeDetectionHandler.FROM_GALLERY) && initialBundle.getBoolean(
+//                EdgeDetectionHandler.FROM_GALLERY,
+//                false
+//            )
+//        ) {
+//            pickupFromGallery()
+//        }
     }
 
-    fun pickupFromGallery() {
-        mPresenter.stop()
-        val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
-        ActivityCompat.startActivityForResult(this, gallery, 1, null);
-    }
+//    fun pickupFromGallery() {
+//        mPresenter.stop()
+//        val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+//        ActivityCompat.startActivityForResult(this, gallery, 1, null);
+//    }
 
 
     override fun onStart() {

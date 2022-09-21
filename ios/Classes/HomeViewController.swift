@@ -40,7 +40,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
             
             present(cameraController, animated: true) {
                 if let window = UIApplication.shared.keyWindow {
-                     window.addSubview(self.selectPhotoButton)
+               //      window.addSubview(self.selectPhotoButton)
                     self.setupConstraints()
                 }
             }
@@ -49,19 +49,19 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         if (canUseGallery == true) {
-            selectPhotoButton.isHidden = false
+          //  selectPhotoButton.isHidden = false
         }
     }
     
-    lazy var selectPhotoButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "gallery", in: Bundle(for: SwiftEdgeDetectionPlugin.self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate), for: .normal)
-        button.tintColor = UIColor.white
-        button.addTarget(self, action: #selector(selectPhoto), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.isHidden = true
-        return button
-    }()
+//     lazy var selectPhotoButton: UIButton = {
+//         let button = UIButton()
+//         button.setImage(UIImage(named: "gallery", in: Bundle(for: SwiftEdgeDetectionPlugin.self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate), for: .normal)
+//         button.tintColor = UIColor.white
+//         button.addTarget(self, action: #selector(selectPhoto), for: .touchUpInside)
+//         button.translatesAutoresizingMaskIntoConstraints = false
+//         button.isHidden = true
+//         return button
+//     }()
     
     // MARK: - Actions
     
@@ -89,7 +89,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
     }
     
     func hideButtons() {
-        selectPhotoButton.isHidden = true
+     //   selectPhotoButton.isHidden = true
     }
     
     private func setupConstraints() {

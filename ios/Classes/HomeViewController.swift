@@ -40,7 +40,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
             
             present(cameraController, animated: true) {
                 if let window = UIApplication.shared.keyWindow {
-                    window.addSubview(self.selectPhotoButton)
+                     window.addSubview(self.selectPhotoButton)
                     self.setupConstraints()
                 }
             }
@@ -93,24 +93,24 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
     }
     
     private func setupConstraints() {
-        var selectPhotoButtonConstraints = [NSLayoutConstraint]()
-        
-        if #available(iOS 11.0, *) {
-            selectPhotoButtonConstraints = [
-                selectPhotoButton.widthAnchor.constraint(equalToConstant: 44.0),
-                selectPhotoButton.heightAnchor.constraint(equalToConstant: 44.0),
-                selectPhotoButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -24.0),
-                view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
-            ]
-        } else {
-            selectPhotoButtonConstraints = [
-                selectPhotoButton.widthAnchor.constraint(equalToConstant: 44.0),
-                selectPhotoButton.heightAnchor.constraint(equalToConstant: 44.0),
-                selectPhotoButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -24.0),
-                view.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
-            ]
-        }
-        NSLayoutConstraint.activate(selectPhotoButtonConstraints)
+//         var selectPhotoButtonConstraints = [NSLayoutConstraint]()
+//
+//         if #available(iOS 11.0, *) {
+//             selectPhotoButtonConstraints = [
+//                 selectPhotoButton.widthAnchor.constraint(equalToConstant: 44.0),
+//                 selectPhotoButton.heightAnchor.constraint(equalToConstant: 44.0),
+//                 selectPhotoButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -24.0),
+//                 view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
+//             ]
+//         } else {
+//             selectPhotoButtonConstraints = [
+//                 selectPhotoButton.widthAnchor.constraint(equalToConstant: 44.0),
+//                 selectPhotoButton.heightAnchor.constraint(equalToConstant: 44.0),
+//                 selectPhotoButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -24.0),
+//                 view.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
+//             ]
+//         }
+//         NSLayoutConstraint.activate(selectPhotoButtonConstraints)
     }
     
     func setParams(saveTo: String, canUseGallery: Bool) {
